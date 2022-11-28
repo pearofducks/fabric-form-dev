@@ -4,13 +4,16 @@ import javascriptLogo from './javascript.svg'
 import { setupCounter } from './counter.js'
 
 document.querySelector('#app').innerHTML = `
+  <div class="radio"></div>
+  <div class="radio checked"></div>
+  <br/>
   <label>
-    <input type="text" class="input" />
-    <span>i am a text field</span>
+    <input type="radio" class="radio" name="foo" />
+    <span>i am a radio field</span>
   </label>
   <br />
-  <label>
-    <input type="radio" class="radio" />
+  <label style="margin-top: 8px; display: block;">
+    <input type="radio" class="radio" name="foo" />
     <span>i am a radio field</span>
   </label>
   </div>
