@@ -35,6 +35,8 @@ document.querySelector('#app').innerHTML = `
   </label>
   </div>
   <ol style="margin-top: 48px">
+    <li>cursor pointer only on input el?</li>
+    <li>breaking up input el and label so can have more atomic-ness</li>
     <li>display block ok for input el?</li>
     <li>how do we size these? will it need to change per-font/per-brand?</li>
     <li>more bold checkmark?</li>
