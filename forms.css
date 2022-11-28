@@ -45,7 +45,11 @@
   --p-background-color-hover: #eff5ff;
   --p-focus-ring-color: #06befb;
 
-  transition: 0.15s linear;
+  /* specific properties so the focus-ring via outline is instant */
+  transition: background-color 0.2s linear,
+              border-color 0.2s linear,
+              background-size 0.2s ease,
+              box-shadow 0.2s ease;
   cursor: pointer;
   appearance: none;
   display: block;
@@ -56,7 +60,6 @@
   background-color: var(--p-background-color);
   border-width: 1px;
   border-color: var(--p-border-color);
-  --un-shadow: 0 0 #0000;
 }
 .radio:focus-visible, .checkbox:focus-visible {
   outline: 2px solid var(--p-focus-ring-color);
