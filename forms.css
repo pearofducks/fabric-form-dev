@@ -1,4 +1,3 @@
-
 .input {
   background-color: #fff;
   border-color: gray;
@@ -29,7 +28,6 @@
   opacity: 1;
 }
 
-
 .select {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='red' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
   background-position: right 16px center;
@@ -38,71 +36,56 @@
   padding-right: 32px;
 }
 
-
 .radio, .checkbox {
   --p-toggle-size: 24px;
-  --p-checked-color: purple;
-  --p-border-color: gray;
-  --p-border-color-hover: red;
-  --p-background-color: red;
-  --p-background-color-hover: red;
-  --p-background-color-checked:
-  --p-focus-ring-color: blue;
+  --p-checked-color: #0063fb;
+  --p-border-color: #71717a;
+  --p-border-color-hover: #0063fb;
+  --p-background-color: white;
+  --p-background-color-hover: #eff5ff;
+  --p-focus-ring-color: #06befb;
+
+  transition: 0.15s linear;
   cursor: pointer;
   appearance: none;
-  padding: 0;
-  display: inline-block;
-  vertical-align: middle;
-  background-origin: border-box;
+  display: block;
   user-select: none;
   flex-shrink: 0;
   height: var(--p-toggle-size);
   width: var(--p-toggle-size);
-  color: red;
-  background-color: #fff;
+  background-color: var(--p-background-color);
   border-width: 1px;
-  border-color: gray;
+  border-color: var(--p-border-color);
   --un-shadow: 0 0 #0000;
 }
 .radio:focus-visible, .checkbox:focus-visible {
-  outline: 2px solid var(--p-focus-color);
+  outline: 2px solid var(--p-focus-ring-color);
   outline-offset: 2px;
 }
-.radio:checked, .radio.checked, .checkbox:checked, .checkbox.checked {
-  /* border-color: transparent; */
-  /* background-color: currentColor; */
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-/* TODO: add focus here (also validate if this is even doing anything?) */
-.radio:checked:hover, .checkmark:checked:hover, .checkmark:indeterminate:hover {
-  /* border-color: transparent; */
-  /* background-color: currentColor; */
+.radio:hover, .checkbox:hover {
+  background-color: var(--p-background-color-hover);
+  border-color: var(--p-border-color-hover);
 }
 .checkbox {
   border-radius: 4px;
-}
-.checkbox:checked {
+  background-origin: border-box;
+  background-size: 75% 75%;
+  background-position: center;
+  background-repeat: no-repeat;
   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+}
+.checkbox:checked, .checkbox.checked, .checkbox:indeterminate {
+  background-color: var(--p-checked-color);
+  border-color: var(--p-checked-color);
+  background-size: 100% 100%;
 }
 .checkbox:indeterminate {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");
-  /* TODO: seems redundant? */
-  border-color: transparent;
-  background-color: currentColor;
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 .radio {
-  border-radius: 9999px;
-  transition: 0.15s ease;
+  border-radius: 50%;
 }
 .radio:checked, .radio.checked {
-  border-color: purple;
-  box-shadow: inset 0 0 0 calc(var(--p-toggle-size) / 4) purple;
-  /* border-width: 10px; */
-  /* background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e"); */
+  border-color: var(--p-checked-color);
+  box-shadow: inset 0 0 0 calc(var(--p-toggle-size) / 4) var(--p-checked-color);
 }
-
