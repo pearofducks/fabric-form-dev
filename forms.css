@@ -1,0 +1,108 @@
+
+.input {
+  background-color: #fff;
+  border-color: gray;
+  border-width: 1px;
+  border-radius: 4px;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  font-size: 16px;
+  line-height: 22px;
+  --un-shadow: 0 0 #0000;
+}
+.input:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --un-ring-inset: var(--un-empty,/*!*/ /*!*/);
+  --un-ring-offset-width: 0px;
+  --un-ring-offset-color: #fff;
+  --un-ring-color: red;
+  --un-ring-offset-shadow: var(--un-ring-inset) 0 0 0 var(--un-ring-offset-width) var(--un-ring-offset-color);
+  --un-ring-shadow: var(--un-ring-inset) 0 0 0 calc(1px + var(--un-ring-offset-width)) var(--un-ring-color);
+  box-shadow: var(--un-ring-offset-shadow), var(--un-ring-shadow), var(--un-shadow);
+  border-color: red;
+}
+.input::placeholder {
+  color: blue;
+  opacity: 1;
+}
+
+
+.select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='red' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 16px center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  padding-right: 32px;
+  print-color-adjust: exact;
+}
+
+
+.radio, .checkbox {
+  appearance: none;
+  padding: 0;
+  print-color-adjust: exact;
+  display: inline-block;
+  vertical-align: middle;
+  background-origin: border-box;
+  user-select: none;
+  flex-shrink: 0;
+  height: 16px;
+  width: 16px;
+  color: red;
+  background-color: #fff;
+  border-color: gray;
+  border-width: 1px;
+  --un-shadow: 0 0 #0000;
+}
+.radio:focus-visible, .checkbox:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --un-ring-inset: var(--un-empty,/*!*/ /*!*/);
+  --un-ring-offset-width: 2px;
+  --un-ring-offset-color: #fff;
+  --un-ring-color: red;
+  --un-ring-offset-shadow: var(--un-ring-inset) 0 0 0 var(--un-ring-offset-width) var(--un-ring-offset-color);
+  --un-ring-shadow: var(--un-ring-inset) 0 0 0 calc(2px + var(--un-ring-offset-width)) var(--un-ring-color);
+  box-shadow: var(--un-ring-offset-shadow), var(--un-ring-shadow), var(--un-shadow);
+}
+.radio:checked, .checkbox:checked {
+  border-color: transparent;
+  background-color: currentColor;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* TODO: add focus here */
+.radio:checked:hover, .checkmark:checked:hover, .checkmark:indeterminate:hover {
+  border-color: transparent;
+  background-color: currentColor;
+}
+
+
+.checkbox {
+  border-radius: 4px;
+}
+.checkbox:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+}
+.checkbox:indeterminate {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");
+  /* TODO: seems redundant? */
+  border-color: transparent;
+  background-color: currentColor;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.radio {
+  border-radius: 9999px;
+}
+.radio:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+}
+
