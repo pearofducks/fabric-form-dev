@@ -38,6 +38,7 @@ document.querySelector('#app').innerHTML = `
     <li>cursor pointer only on input el?</li>
     <li>breaking up input el and label so can have more atomic-ness</li>
     <li>display block ok for input el?</li>
+    <li>no checked+hover style for radio, ok? (doesn't make sense to have one?)</li>
     <li>how do we size these? will it need to change per-font/per-brand?</li>
     <li>more bold checkmark?</li>
   </ol>

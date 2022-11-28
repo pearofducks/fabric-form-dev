@@ -41,8 +41,10 @@
   --p-checked-color: #0063fb;
   --p-border-color: #71717a;
   --p-border-color-hover: #0063fb;
+  --p-border-color-checked-hover: #244eb3;
   --p-background-color: white;
   --p-background-color-hover: #eff5ff;
+  --p-background-color-checked-hover: #244eb3;
   --p-focus-ring-color: #06befb;
 
   /* specific properties so the focus-ring via outline is instant */
@@ -68,6 +70,10 @@
 .radio:hover, .checkbox:hover {
   background-color: var(--p-background-color-hover);
   border-color: var(--p-border-color-hover);
+}
+.checkbox:checked:hover {
+  background-color: var(--p-background-color-checked-hover);
+  border-color: var(--p-border-color-checked-hover);
 }
 .checkbox {
   border-radius: 4px;
