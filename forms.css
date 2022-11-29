@@ -1,27 +1,28 @@
+.input, .radio, .checkbox {
+  /* specific properties so the focus-ring via outline is instant */
+  transition: background-color 0.2s linear,
+              border-color 0.15s linear,
+              background-size 0.2s ease,
+              box-shadow 0.2s ease;
+}
 .input {
+  --p-border-color: #c3ccd9;
+  --p-border-color-hover: #6f7d90;
+  --p-border-color-focus: #0063fb;
+  display: block;
+  line-height: 22px;
   background-color: #fff;
-  border-color: gray;
+  border-color: var(--p-border-color);
   border-width: 1px;
   border-radius: 4px;
-  padding-top: 16px;
-  padding-right: 16px;
-  padding-bottom: 16px;
-  padding-left: 16px;
-  font-size: 16px;
-  line-height: 22px;
-  --un-shadow: 0 0 #0000;
+  padding: 12px 8px;
+}
+.input:hover {
+  border-color: var(--p-border-color-hover);
 }
 .input:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  --un-ring-inset: var(--un-empty,/*!*/ /*!*/);
-  --un-ring-offset-width: 0px;
-  --un-ring-offset-color: #fff;
-  --un-ring-color: red;
-  --un-ring-offset-shadow: var(--un-ring-inset) 0 0 0 var(--un-ring-offset-width) var(--un-ring-offset-color);
-  --un-ring-shadow: var(--un-ring-inset) 0 0 0 calc(1px + var(--un-ring-offset-width)) var(--un-ring-color);
-  box-shadow: var(--un-ring-offset-shadow), var(--un-ring-shadow), var(--un-shadow);
-  border-color: red;
+  border-color: var(--p-border-color-focus);
+  outline-color: var(--p-border-color-focus);
 }
 .input::placeholder {
   color: blue;
@@ -47,11 +48,6 @@
   --p-background-color-checked-hover: #244eb3;
   --p-focus-ring-color: #06befb;
 
-  /* specific properties so the focus-ring via outline is instant */
-  transition: background-color 0.2s linear,
-              border-color 0.2s linear,
-              background-size 0.2s ease,
-              box-shadow 0.2s ease;
   cursor: pointer;
   appearance: none;
   display: block;

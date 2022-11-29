@@ -3,6 +3,21 @@ import './forms.css'
 import { setupCounter } from './counter.js'
 
 document.querySelector('#app').innerHTML = `
+  <label style="text-align: left; display: flex; flex-direction: column">
+    <span>i am a text field</span>
+    <input type="text" class="input" />
+  </label>
+  <div style="margin: 32px 0;"></div>
+  <label style="text-align: left; display: flex; flex-direction: column">
+    <span>i am a select field</span>
+    <select class="select">
+      <option selected disabled value="">Choose something</option>
+      <option value="a">Value a</option>
+      <option value="b">Value b</option>
+      <option value="c">Value c</option>
+    </select>
+  </label>
+  <div style="margin: 32px 0;"></div>
   <h4 style="text-align: left; margin-bottom: 8px;">Dead toggles</h4>
   <div style="display: grid; grid-template-columns: 1fr 1fr;">
     <div class="radio" style="pointer-events: none"></div>
