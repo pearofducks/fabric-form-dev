@@ -19,7 +19,7 @@ document.querySelector('#app').innerHTML = `
   </label>
   <div style="margin: 32px 0;"></div>
   <h4 style="text-align: left; margin-bottom: 8px;">Dead toggles</h4>
-  <div style="display: grid; grid-template-columns: 1fr 1fr;">
+  <div style="display: grid; grid-template-columns: max-content max-content; gap: 8px;">
     <div class="radio" style="pointer-events: none"></div>
     <div class="radio checked" style="pointer-events: none"></div>
   </div>
@@ -35,7 +35,7 @@ document.querySelector('#app').innerHTML = `
 
   <div style="margin: 32px 0;"></div>
   <h4 style="text-align: left; margin-bottom: 8px;">Dead toggles</h4>
-  <div style="display: grid; grid-template-columns: 1fr 1fr;">
+  <div style="display: grid; grid-template-columns: max-content max-content; gap: 8px;">
     <div class="checkbox" style="pointer-events: none"></div>
     <div class="checkbox checked" style="pointer-events: none"></div>
   </div>
@@ -54,7 +54,6 @@ document.querySelector('#app').innerHTML = `
     <li>breaking up input el and label so can have more atomic-ness</li>
     <li>display block ok for input el?</li>
     <li>no checked+hover style for radio, ok? (doesn't make sense to have one?)</li>
-    <li>how do we size these? will it need to change per-font/per-brand?</li>
     <li>more bold checkmark?</li>
   </ol>
 `

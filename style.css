@@ -1,4 +1,10 @@
+@font-face{font-family:'BlocketSans-Regular';src:local('Blocket Sans Regular'),local('BlocketSans-Regular'),url('https://public-assets.blocketcdn.se/static/fonts/BlocketSans-Regular.woff2') format('woff2'),url('https://public-assets.blocketcdn.se/static/fonts/BlocketSans-Regular.woff') format('woff');font-display:swap;}/*!sc*/
+@font-face{font-family:'BlocketSans-Bold';src:local('Blocket Sans Bold'),local('BlocketSans-Bold'),url('https://public-assets.blocketcdn.se/static/fonts/BlocketSans-Bold.woff2') format('woff2'),url('https://public-assets.blocketcdn.se/static/fonts/BlocketSans-Bold.woff') format('woff');font-display:swap;}/*!sc*/
+@font-face{font-family:'BlocketSans-Medium';src:local('Blocket Sans Medium'),local('BlocketSans-Medium'),url('https://public-assets.blocketcdn.se/static/fonts/BlocketSans-Medium.woff2') format('woff2'),url('https://public-assets.blocketcdn.se/static/fonts/BlocketSans-Medium.woff') format('woff');font-display:swap;}/*!sc*/
+@font-face{font-family:'Blocket-Display';src:local('Blocket Display'),local('BlocketDisplay'),local('Blocket-Display'),url('https://public-assets.blocketcdn.se/static/fonts/Blocket-Display.woff2') format('woff2'),url('https://public-assets.blocketcdn.se/static/fonts/Blocket-Display.woff') format('woff');font-display:swap;}/*!sc*/
 :root {
+  font-family: BlocketSans-Regular, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -26,10 +32,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
