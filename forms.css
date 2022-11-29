@@ -1,6 +1,6 @@
-.input, .radio, .checkbox {
+.input, .radio, .checkbox, .select {
   /* specific properties so the focus-ring via outline is instant */
-  transition: background-color 0.2s linear,
+  transition: background-color 0.15s linear,
               border-color 0.15s linear,
               background-size 0.2s ease,
               box-shadow 0.2s ease;
