@@ -1,15 +1,17 @@
 .label {
   user-select: none;
 }
+
 .input, .textarea, .radio, .checkbox, .select {
   display: block;
   border-width: 1px;
-  /* specific properties so the focus-ring via outline is instant */
+  /* specific properties are used here so the focus-ring via outline is instant */
   transition: background-color 0.15s linear,
               border-color 0.15s linear,
               background-size 0.2s ease,
               box-shadow 0.2s ease;
 }
+
 .input, .textarea, .select {
   line-height: 22px;
   background-color: var(--x-form-field-bg);
@@ -26,15 +28,6 @@
   }
 }
 
-/* fixes browser focus-ring behavior */
-.select:focus {
-  box-shadow: inset 0 0 0 1px var(--x-form-field-focus);
-}
-.select:active {
-  border-color: var(--x-form-field-focus);
-  outline-color: var(--x-form-field-focus);
-}
-
 /* FIXME */
 .input::placeholder {
   color: blue;
@@ -48,6 +41,15 @@
   background-repeat: no-repeat;
   background-size: 32px 32px;
   padding-right: 32px;
+
+  /* fixes browser focus-ring behavior */
+  &:focus {
+    box-shadow: inset 0 0 0 1px var(--x-form-field-focus);
+  }
+  &:active {
+    border-color: var(--x-form-field-focus);
+    outline-color: var(--x-form-field-focus);
+  }
 }
 
 .radio, .checkbox {
@@ -70,12 +72,6 @@
   }
 }
 
-/* TODO - ok if we don't style radio here? because clicking it does nothing, unlike checkbox */
-.checkbox:checked:hover {
-  background-color: var(--x-form-toggle-bg-checked-hover);
-  border-color: var(--x-form-toggle-border-checked-hover);
-}
-
 .checkbox {
   border-radius: 4px;
   background-origin: border-box;
@@ -88,6 +84,11 @@
     background-color: var(--x-form-toggle-bg-checked);
     border-color: var(--x-form-toggle-border-checked);
     background-size: 100% 100%;
+  }
+  /* TODO - ok if we don't style radio here? because clicking it does nothing, unlike checkbox */
+  &:checked:hover {
+    background-color: var(--x-form-toggle-bg-checked-hover);
+    border-color: var(--x-form-toggle-border-checked-hover);
   }
   &:indeterminate {
     background-image: var(--x-form-check-dash);
