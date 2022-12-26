@@ -1,9 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
+  mini-svg-data-uri: ^1.4.4
   vite: ^3.2.3
 
 devDependencies:
+  mini-svg-data-uri: 1.4.4
   vite: 3.2.4
 
 packages:
@@ -259,6 +261,11 @@ packages:
     resolution: {integrity: sha512-RRjxlvLDkD1YJwDbroBHMb+cukurkDWNyHx7D3oNB5x9rb5ogcksMC5wHCadcXoo67gVr/+3GFySh3134zi6rw==}
     dependencies:
       has: 1.0.3
+    dev: true
+
+  /mini-svg-data-uri/1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
     dev: true
 
   /nanoid/3.3.4:

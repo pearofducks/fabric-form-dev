@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "mini-svg-data-uri": "^1.4.4",
     "vite": "^3.2.3"
   }
 }

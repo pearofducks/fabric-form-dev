@@ -1,14 +1,14 @@
 import './style.css'
 import './forms.css'
-import { setupCounter } from './counter.js'
+import './formSvgs.js'
 
 document.querySelector('#app').innerHTML = `
-  <label style="text-align: left; display: flex; flex-direction: column">
+  <label class="label" style="text-align: left; display: flex; flex-direction: column">
     <span>i am a text field</span>
     <input type="text" class="input" />
   </label>
   <div style="margin: 32px 0;"></div>
-  <label style="text-align: left; display: flex; flex-direction: column">
+  <label class="label" style="text-align: left; display: flex; flex-direction: column">
     <span>i am a select field</span>
     <select class="select">
       <option selected disabled value="">Choose something</option>
@@ -24,11 +24,11 @@ document.querySelector('#app').innerHTML = `
     <div class="radio checked" style="pointer-events: none"></div>
   </div>
   <div style="margin: 32px 0;"></div>
-  <label style="display: flex; align-items: center;">
+  <label class="label" style="display: flex; align-items: center;">
     <input type="radio" class="radio" name="foo" />
     <span style="margin-left: 8px;">i am a radio field</span>
   </label>
-  <label style="margin-top: 8px; display: flex; align-items: center;">
+  <label class="label" style="margin-top: 8px; display: flex; align-items: center;">
     <input type="radio" class="radio" name="foo" />
     <span style="margin-left: 8px">i am a radio field</span>
   </label>
@@ -40,11 +40,11 @@ document.querySelector('#app').innerHTML = `
     <div class="checkbox checked" style="pointer-events: none"></div>
   </div>
   <div style="margin: 32px 0;"></div>
-  <label style="display: flex; align-items: center;">
+  <label class="label" style="display: flex; align-items: center;">
     <input type="checkbox" class="checkbox" name="bar" />
     <span style="margin-left: 8px;">i am a checkbox field</span>
   </label>
-  <label style="margin-top: 8px; display: flex; align-items: center;">
+  <label class="label" style="margin-top: 8px; display: flex; align-items: center;">
     <input type="checkbox" class="checkbox" name="bar" />
     <span style="margin-left: 8px">i am a checkbox field</span>
   </label>
@@ -57,5 +57,3 @@ document.querySelector('#app').innerHTML = `
     <li>more bold checkmark?</li>
   </ol>
 `
-
-setupCounter(document.querySelector('#counter'))
