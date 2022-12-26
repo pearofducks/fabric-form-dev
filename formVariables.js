@@ -9,6 +9,25 @@ const checkDash = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="
 const style = document.createElement('style')
 style.innerHTML = `
   :root, :host {
+    --x-form-bg: white;
+    --x-form-focus: #0063fb;
+    --x-form-focus-ring: #06befb;
+
+    --x-form-field-bg: var(--x-form-bg);
+    --x-form-field-border: #c3ccd9;
+    --x-form-field-border-hover: #6f7d90;
+    --x-form-field-focus: var(--x-form-focus);
+
+    --x-form-toggle-size: 24px;
+    --x-form-toggle-border: #71717a;
+    --x-form-toggle-border-checked: var(--x-form-focus);
+    --x-form-toggle-border-hover: var(--x-form-focus);
+    --x-form-toggle-border-checked-hover: #244eb3;
+    --x-form-toggle-bg: var(--x-form-bg);
+    --x-form-toggle-bg-checked: var(--x-form-focus);
+    --x-form-toggle-bg-hover: #eff5ff;
+    --x-form-toggle-bg-checked-hover: #244eb3;
+
     --x-form-select-chevron: ${encode(selectChevron)};
     --x-form-check-mark: ${encode(checkMark)};
     --x-form-check-dash: ${encode(checkDash)};
