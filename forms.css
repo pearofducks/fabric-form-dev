@@ -1,4 +1,4 @@
-.input, .radio, .checkbox, .select {
+.input, .textarea, .radio, .checkbox, .select {
   /* specific properties so the focus-ring via outline is instant */
   transition: background-color 0.15s linear,
               border-color 0.15s linear,
