@@ -2,7 +2,7 @@ import * as lightning from 'lightningcss'
 
 const { code } = lightning.bundle({
   filename: 'forms.css',
-  minify: false,
+  minify: true,
   drafts: { nesting: true, customMedia: true },
   targets: {
     safari: (12 << 16),

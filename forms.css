@@ -2,6 +2,8 @@
   user-select: none;
 }
 .input, .textarea, .radio, .checkbox, .select {
+  display: block;
+  border-width: 1px;
   /* specific properties so the focus-ring via outline is instant */
   transition: background-color 0.15s linear,
               border-color 0.15s linear,
@@ -9,11 +11,9 @@
               box-shadow 0.2s ease;
 }
 .input, .textarea, .select {
-  display: block;
   line-height: 22px;
   background-color: var(--x-form-field-bg);
   border-color: var(--x-form-field-border);
-  border-width: 1px;
   border-radius: 4px;
   padding: 12px 8px;
 
@@ -53,13 +53,11 @@
 .radio, .checkbox {
   cursor: pointer;
   appearance: none;
-  display: block;
   user-select: none;
   flex-shrink: 0;
   height: var(--x-form-toggle-size);
   width: var(--x-form-toggle-size);
   background-color: var(--x-form-toggle-bg);
-  border-width: 1px;
   border-color: var(--x-form-toggle-border);
 
   &:focus-visible {
@@ -85,19 +83,22 @@
   background-position: center;
   background-repeat: no-repeat;
   background-image: var(--x-form-check-mark);
+
+  &:checked, &.checked, &:indeterminate {
+    background-color: var(--x-form-toggle-bg-checked);
+    border-color: var(--x-form-toggle-border-checked);
+    background-size: 100% 100%;
+  }
+  &:indeterminate {
+    background-image: var(--x-form-check-dash);
+  }
 }
-.checkbox:checked, .checkbox.checked, .checkbox:indeterminate {
-  background-color: var(--x-form-toggle-bg-checked);
-  border-color: var(--x-form-toggle-border-checked);
-  background-size: 100% 100%;
-}
-.checkbox:indeterminate {
-  background-image: var(--x-form-check-dash);
-}
+
 .radio {
   border-radius: 50%;
-}
-.radio:checked, .radio.checked {
-  border-color: var(--x-form-toggle-border-checked);
-  box-shadow: inset 0 0 0 calc(var(--x-form-toggle-size) / 4) var(--x-form-toggle-bg-checked);
+
+  &:checked, &.checked {
+    border-color: var(--x-form-toggle-border-checked);
+    box-shadow: inset 0 0 0 calc(var(--x-form-toggle-size) / 4) var(--x-form-toggle-bg-checked);
+  }
 }

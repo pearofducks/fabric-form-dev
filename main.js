@@ -1,6 +1,6 @@
 import './style.css'
 import './forms.css'
-import './formSvgs.js'
+import './formVariables.js'
 
 document.querySelector('#app').innerHTML = `
   <label class="label" style="text-align: left; display: flex; flex-direction: column">
